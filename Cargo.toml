@@ -1,0 +1,24 @@
+[package]
+name = "caff-archive"
+version = "0.1.0"
+edition = "2021"
+authors = ["Chris Olstrom <chris@olstrom.com>"]
+license = "MIT"
+repository = "https://github.com/vtubing/caff-archive"
+documentation = "https://docs.rs/caff-archive"
+description = "a library for manipulating CAFF archives"
+
+[features]
+default = []
+discovery = ["logging"]
+logging = ["dep:log"]
+
+[dependencies]
+byteorder = "^ 1"
+derivative = "^ 2"
+log = { version = "^ 0.4", optional = true }
+thiserror = "^ 1"
+
+[dev-dependencies]
+proptest = "^ 1"
+test-strategy = "^ 0.3"
